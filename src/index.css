@@ -7,7 +7,161 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+   nav .nav-content {
+   background-color: #81c784;
+   padding: 0 20px;
+   display: flex;
+   justify-content: space-between;
+       font-size: 2rem;
+   }
+
+   nav ul a {
+     font-size: 1.1rem;
+   }
+
+   .page-footer {
+     padding-top: 0px;
+     background-color: #c8e6c9;
+   }
+   .container {
+     color: #fff;
+     width: 95%;
+   }
+   .grey-text.text-lighten-4 {
+     color: #fff !important;
+   }
+   .conteiner_main {
+       padding: 25px 15vw;
+     /*   height: calc(100vh - 64px - 50px); */
+   }
+   .conteiner_list{
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+         gap: 25px;
+   }
+   .card {
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+     
+   }
+  .card .card-action {
+    display: flex;
+    border-radius: 0 0 2px 2px;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 16px 10px;
+  }
+ 
+
+  .card .card-content {
+   flex-grow: 1;
+  }
+
+  .card .card-content p {
+    font-size: 10px;
+  }
+
+  .card .card-content .card-title {
+    line-height: 16px;
+     font-size: 9px;
+  }
+ 
+  .progress {
+    width: 50%;
+    margin: 8vw auto 11vw;
+  }
+
+  .btn{
+    font-size: 10px;
+        height: 25px;
+        padding: 0 5px;
+            line-height: 0;
+  }
+
+  .cart-quantity{
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .style-cart-quantity{
+ position: fixed;
+top: 24.5rem ;
+ right: 4rem;
+ cursor: pointer;
+ z-index: 5;
+ padding: 1rem;
+    
+  }
+
+  @media screen and (min-width:767px) {
+    .style-cart-quantity {
+      top: 6.5rem;
+      bottom: unset;
+    }
+  }
+
+  .basket-list{
+ position: fixed;
+ top:50%;
+ left:50%;
+
+ width:50%;
+ max-width: 95%;
+ transform: translate( -50% , -50%);
+ background-color: #fff;
+ cursor:pointer;
+
+ -webkit-animation: show 500ms ease-in-out;
+
+         animation: show 500ms ease-in-out;
+ }
+  .bascet-close{
+position: absolute;
+top: 0.5rem;
+right: 1.5rem;
+
+color:#fff;
+cursor: pointer;
+  };
+  
+
+
+   @-webkit-keyframes show {
+  from {
+    top: 70%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+
 }
+  
+
+
+   @keyframes show {
+  from {
+    top: 70%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+
+}
+  
+
+
+  
+
+
+  
+
+  
+
+  
