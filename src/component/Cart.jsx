@@ -2,10 +2,9 @@ import React from 'react';
 //import { FanCardList } from '../component/Card-list';
 
 export const Cart = (props) => {
-
+  
   const { quantity, handleBascetShow = Function.prototype } = props;
- // console.log('quantity => ', quantity)
-    return(
+     return(
     <div className='style-cart-quantity blue darken-4 white-text' 
         onClick={handleBascetShow}
     >
@@ -13,8 +12,7 @@ export const Cart = (props) => {
       {quantity
         ? <span className='cart-quantity'>{quantity}</span> 
        : null}
-
-    
     </div>
-  )
+  )  
+
 }

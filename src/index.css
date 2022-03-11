@@ -22,6 +22,7 @@ body {
    .page-footer {
      padding-top: 0px;
      background-color: #c8e6c9;
+     
    }
    .container {
      color: #fff;
@@ -38,6 +39,12 @@ body {
          display: grid;
          grid-template-columns: repeat(auto-fit, minmax(150px, auto));
          gap: 25px;
+
+        /*  width: 70%;
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+         gap: 25px;
+         margin: 30px auto; */
    }
    .card {
         display: flex;
@@ -116,7 +123,7 @@ top: 24.5rem ;
 
  -webkit-animation: show 500ms ease-in-out;
 
-         animation: show 500ms ease-in-out;
+      
  }
   .bascet-close{
 position: absolute;
@@ -127,8 +134,6 @@ color:#fff;
 cursor: pointer;
   };
   
-
-
    @-webkit-keyframes show {
   from {
     top: 70%;
@@ -138,22 +143,48 @@ cursor: pointer;
     top: 50%;
     opacity: 1;
   }
-
 }
   
-
-
-   @keyframes show {
-  from {
-    top: 70%;
-    opacity: 0;
-  }
-  to {
-    top: 50%;
-    opacity: 1;
-  }
-
+.button{
+  margin: 20px;
 }
+ 
+.basket-qantity{
+  cursor:pointer;
+  color: red;
+  vertical-align: middle;
+/* 
+vertical-align описывает вертикальное позиционирование строчных (inline)
+middle Выравнивает середину элемента с базовой линией своего родителя плюс половина от его высоты (x-height). */
+}
+
+ #toast-container{
+   top: 3rem ! important; 
+    right: 0.9%;
+ 
+ }
+
+  .toast{
+   margin: auto !important;
+   width: 80% !important;
+   background-color:#81c784;
+   color:#fff; 
+  }
+
+  .collection-item {
+        display: flex;
+        justify-content: space-between;
+  }
+
+   .name{
+     width: 100%;
+   }
+   .container_icon{
+     width: 20%;
+     display: flex;
+     justify-content: space-between;
+     padding: 0 10px;
+   }
   
 
 

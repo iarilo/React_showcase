@@ -1,13 +1,12 @@
 import React from 'react';
 
 export const FanElement = (props) => {
-  const { mainId, displayName, displayDescription, price, displayAssets, addToBasket  = Function.prototype } = props;
+
+ const { mainId, displayName, displayDescription, price, displayAssets, addToBasket  = Function.prototype } = props;
+ 
   const { full_background } = displayAssets[0];
   const { regularPrice } = price;
- 
-  // const { regularPrice, finalPrice } = price;
-  //console.log('Props: ', props)
-   return (
+    return (
   <div className="card" >
       <div className="card-image">
         <img src={full_background} alt={displayName} />
@@ -26,5 +25,6 @@ export const FanElement = (props) => {
     </div>
     
     </div>
-  );
+  ); 
+
 };

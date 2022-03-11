@@ -2,7 +2,8 @@ import React from 'react';
 import { FanHedar } from './layout/Header';
 import { FanFooter } from './layout/Footer';
 import { FanShop } from './layout/Main';
-import { FanTest } from './component/test';
+import { FanTest } from  './Test';
+
 
 
 function App() {
