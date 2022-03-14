@@ -1,6 +1,6 @@
 import React,{useEffect } from 'react'
 
-export const Fun_Alert = (props) => {
+export const FunAlert = (props) => {
   
    const { displayName = '', closeAlert = Function.prototype } = props;
  useEffect(() => {

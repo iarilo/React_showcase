@@ -4,20 +4,16 @@ import { API_KEY, API_URL } from '../config';
 import { FanPreloader } from '../component/preloader';
 import { Cart } from '../component/Cart';
 import { FanBaskedList } from '../component/Baskrd-list';
-import { Fun_Alert } from '../component/File_Alert';
+import { FunAlert } from '../component/File_Alert';
 
 export const FanShop = () => {
-
-   const [goods, setGoods] = useState([]);
+  const [goods, setGoods] = useState([]);
   const [loading, setLoading] = useState(true);
   const [order, setOrder] = useState([]);
   //состояние иконки корзины
   const [isBasketShow, setBascetShow] = useState(false);
   //alert
   const [alertName, setAlertName] = useState('');
-
-
-  
 
   const addToBasket = (item) => {
     // получаю индекс эллемента массива
@@ -63,7 +59,6 @@ export const FanShop = () => {
 
   //=========================================================
   const incQuantity = (itemId) => {
-   
     const newOrder = order.map((el) => {
       if (el.mainId === itemId) {
         const newQuantity = el.quantity + 1;
@@ -76,29 +71,29 @@ export const FanShop = () => {
       }
     });
     setOrder(newOrder);
-  };
-
+ };
   const decQuantity = (itemId) => {
 
-    const newOrder = order.map((el) => {
-      if (el.mainId === itemId) {
-        const newQuantity = el.quantity - 1;
-        return {
-          ...el,
-          quantity: newQuantity >= 0 ? newQuantity : 0,
-        };
-      } else {
-        return el;
-      }
-    });
-    setOrder(newOrder);
+
+     const newOrder = order.map((el) => {
+            if (el.mainId === itemId) {
+              const newQuantity = el.quantity - 1;
+              return {
+                ...el,
+                quantity: newQuantity >= 0 ? newQuantity : 0,
+              };
+            } else {
+              return el;
+            }
+          });
+          setOrder(newOrder);  
   };
 
   //========================================================
   //fun. alert
-   const closeAlert = () => {
+  const closeAlert = () => {
     setAlertName('');
- }; 
+  };
   useEffect(function getGoods() {
     fetch(API_URL, { headers: { Authorization: API_KEY } })
       .then((respons) => respons.json())
@@ -117,7 +112,7 @@ export const FanShop = () => {
         <FanShowcaselist goods={goods} addToBasket={addToBasket} />
       )}
       {/* появдение и исчезание корзины */}
-       {isBasketShow && (
+      {isBasketShow && (
         <FanBaskedList
           order={order}
           handleBascetShow={handleBascetShow}
@@ -126,11 +121,9 @@ export const FanShop = () => {
           decQuantity={decQuantity}
         />
       )}
-       {alertName && (
-        <Fun_Alert displayName={alertName} closeAlert={closeAlert} />
-      )} 
+      {alertName && (
+        <FunAlert displayName={alertName} closeAlert={closeAlert} />
+      )}
     </main>
-  ); 
-
-
+  );
 };
